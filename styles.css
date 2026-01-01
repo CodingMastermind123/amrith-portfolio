@@ -9,15 +9,12 @@ body {
     font-family: "Space Mono", monospace;
     font-weight: 400;
     font-style: normal;
-    background-color: #ffffff;
-}
+    background-color: #171616;
+
 
 a {
     text-decoration: none;
-    color: rgb(80, 80, 236);
-    &:hover {
-        text-decoration: underline;
-    }
+    color: rgb(226, 234, 231);
 }
 
 header {
@@ -28,7 +25,7 @@ header {
     justify-content: space-between;
     max-width: 1440px;
     margin: auto;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
     
     .logo-holder {
         display: flex;
@@ -40,7 +37,7 @@ header {
             align-items: center;
             font-size: 32px;
             justify-content: center;
-            background-color: rgb(80, 80, 236);
+            background-color: rgb(7, 219, 123);
             color: #f1f1f1;
             height: 64px;
             width: 64px;
@@ -69,7 +66,7 @@ header {
                     display: inline-block;
                     padding: 10px 20px;
                     &:hover {
-                        background-color: #f1f1f1;
+                        background-color: rgb(7, 219, 123);
                         border-radius: 10px;
                         text-decoration: none;
                     }
@@ -77,5 +74,71 @@ header {
 
             }
         }
+
+        .mobile-toggle {
+            display: none;
+            color: rgb(226, 234, 231);
+            padding: 10px;
+            @media (max-width: 768px) {
+                display: inline-block;
+                position: absolute;
+                top: 20px;
+                right: 20px;
+            }
+        }
     }
+
+    @media (max-width: 1024px) {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    @media (max-width: 768px) {
+        flex-direction: column;
+        align-items: center;
+        nav {
+            margin-top: 10px;
+            width: 100%;
+            ul {
+                display: none;
+                flex-direction: column;
+                text-align: center;
+                width: 100%;
+                &.active {
+                    display: flex;
+                }
+            }
+        }
+    }
+
+
+    .welcome {
+        display: flex;
+        align-items: center;
+        flex-direction: column;         
+        justify-content: center;     
+        text-align: center;
+    }
+
+
+    .welcome-text {
+        font-size: 180px;
+        font-weight: 700;
+        color: rgb(7, 219, 123);
+    }
+
+    .to {
+        font-size: 100px;
+        font-weight: 700;
+        color: rgb(226, 234, 231);
+    }
+
+    .world-text {
+        font-size: 180px;
+        font-weight: 700;
+        color: rgb(226, 234, 231);
+    }
+
+
+
 }
