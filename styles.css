@@ -155,10 +155,37 @@ header {
 
     .resume-button {
         display: inline-block;
+        margin-top: 10px;
         padding: 10px 30px;
         border-radius: 10px;
-        border-color:rgb(7, 219, 123);
+        border: 2px solid rgb(7, 219, 123);
+        background: linear-gradient(
+        to left,
+        #171616 0%,
+        #171616 50%,
+        rgb(7, 219, 123) 50%,
+        rgb(7, 219, 123) 100%
+        );
+        background-size: 200% 100%;              /* make gradient wider than button */
+        background-position: right;               /* start position */
+        transition: background-position 0.4s ease;
+
+        &:hover {
+            background-position: left; 
+        }
     }
+
+
+    .social-button {
+        display: inline-block;
+        border: 2px solid rgb(7, 219, 123);
+        border-radius: 20px;
+        &:hover {
+            background-color:rgb(7, 219, 123);
+        }
+    }
+
+
 
     .hero {
         display: flex;
