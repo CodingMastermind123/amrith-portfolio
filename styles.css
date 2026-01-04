@@ -14,7 +14,7 @@ body {
 
 a {
     text-decoration: none;
-    color: rgb(226, 234, 231);
+    color: rgb(255, 255, 255);
 }
 
 header {
@@ -76,7 +76,7 @@ header {
 
         .mobile-toggle {
             display: none;
-            color: rgb(226, 234, 231);
+            color: rgb(255, 255, 255);
             padding: 10px;
             @media (max-width: 768px) {
                 display: inline-block;
@@ -156,8 +156,9 @@ header {
     .resume-button {
         display: inline-block;
         margin-top: 10px;
+        margin-right: 6px;
         padding: 10px 30px;
-        border-radius: 10px;
+        border-radius: 20px;
         border: 2px solid rgb(7, 219, 123);
         background: linear-gradient(
         to left,
@@ -177,12 +178,30 @@ header {
 
 
     .social-button {
-        display: inline-block;
-        border: 2px solid rgb(7, 219, 123);
-        border-radius: 20px;
-        &:hover {
-            background-color:rgb(7, 219, 123);
-        }
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        border: 3px solid #07db7b;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        margin-right: 8px;
+        text-decoration: none;
+        background-color: transparent;
+    }
+
+    .social-button i {
+        font-size: 23px;
+        color: #07db7b;          /* icon green by default */
+        transition: color 0.2s ease, background-color 0.2s ease;
+    }
+
+    .social-button:hover {
+        background-color: #07db7b;
+    }
+
+    .social-button:hover i {
+        color: #000000;          /* or #ffffff if your page bg isn’t black */
     }
 
 
